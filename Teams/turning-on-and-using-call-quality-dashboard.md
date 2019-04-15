@@ -55,22 +55,23 @@ After you sign in, once activated, the CQD will begin collecting and processing 
 ## Features of the Call Quality Dashboard for Microsoft Teams and Skype for Business Online
 
 CQD Summary Reports provide a subset of the features planned for Detailed Reports. The differences between the two editions are summarized here:
-
-| **Feature**                                            | **Summary Reports** | **Detailed Reports** |
-| ------------------------------------------------------ | ------------------- | -------------------- |
-| Application sharing metric                             | No                  | Yes                  |
-| Customer building information support                  | Yes                 | Yes                  |
-| Drill-down analysis support                            | No                  | Yes                  |
-| Media reliability metrics                              | No                  | Yes                  |
-| Out-of-the-box reports                                 | Yes                 | Yes                  |
-| Overview reports                                       | Yes                 | Yes                  |
-| Per-user report set                                    | No                  | Yes                  |
-| Report set customization (add, delete, modify reports) | No                  | Yes                  |
-| Video-based screen sharing metrics                     | No                  | Yes                  |
-| Video metrics                                          | No                  | Yes                  |
-| Amount of data available                               | Last 6 months       | Last 6 months        |
-| Microsoft Teams data                                   | Yes                 | Yes                  |
-
+  
+|**Feature**|**Summary Reports**|**Detailed Reports**|
+|:-----|:-----|:-----|
+|Application sharing metric  <br/> |No  <br/> |Yes  <br/> |
+|Customer building information support  <br/> |Yes  <br/> |Yes  <br/> |
+|Customer endpoint information support  <br/> |Only in cqd.teams.windows.com  <br/> |Yes  <br/> |
+|Drill-down analysis support  <br/> |No  <br/> |Yes  <br/> |
+|Media reliability metrics  <br/> |No  <br/> |Yes  <br/> |
+|Out-of-the-box reports  <br/> |Yes  <br/> |Yes  <br/> |
+|Overview reports  <br/> |Yes  <br/> |Yes  <br/> |
+|Per-user report set  <br/> |No  <br/> |Yes  <br/> |
+|Report set customization (add, delete, modify reports)  <br/> |No  <br/> |Yes  <br/> |
+|Video-based screen sharing metrics  <br/> |No  <br/> |Yes  <br/> |
+|Video metrics  <br/> |No  <br/> |Yes  <br/> |
+|Amount of data available  <br/> |Last 6 months  <br/> |Last 6 months  <br/> |
+|Microsoft Teams data  <br/> |Yes  <br/> |Yes  <br/> |
+   
 ### Out-of-the-box reports
 
 Both editions of CQD provide an out-of-the-box experience, giving you call quality metrics without the need to create any new reports. Once data is processed in the back-end, you can start seeing call quality data in the reports.
@@ -154,24 +155,27 @@ Screenshot shows the Product Filter control with options for All, Microsoft Team
 Screenshot shows the Product Filter control with options for All, Microsoft Teams, and Skype for Business.
 
 In Detailed reports, you can use the **Is Teams** dimension to filter the data to Microsoft Teams or Skype for Business Online data as part of defining the report.
-
+  
 ## Upload Tenant Data information
+<a name="BKMKTenantDataInformationUpload"></a>
 
-The CQD Summary Reports dashboard includes a **Tenant Data Upload** page, accessed by selecting **Tenant Data Upload** from the settings menu in the top-right corner. This page is used for admins to upload their own information, such as mapping of IP address and geographical information, mapping each wireless AP and its MAC address, mapping of Endpoint to Endpoint Make/Model/Type… etc.
-
-CQD Dashboard
-
-CQD Dashboard
-
-1.  On the **Tenant Data Upload** page, use the drop-down menu to choose a data file type for uploading. The file data type denotes the content of the file (for example, “Building” refers to mapping of IP address and building as well as other geographical information, “Endpoint” refers to mapping of Endpoint Name to Endpoint Make/Model/Type…information). Currently we support upload “Building” and “Endpoint” data types for cqd.teams.microsoft.com(in preview stage and not officially available yet), cqd.lync.com only supports upload "Building" data type. A few more data types will be added with subsequent releases.
-
-2.  After selecting the file data type, click **Browse** to choose a data file.
+The CQD Summary Reports dashboard includes a **Tenant Data Upload** page, accessed by selecting **Tenant Data Upload** from the settings menu in the top-right corner. This page is used for admins to upload their own information, such as mapping of IP address and geographical information, mapping each wireless AP and its MAC address, mapping of Endpoint to Endpoint Make/Model/Type, etc.
+  
+![CQD Dashboard](media/839c9ab4-0246-46c9-8402-aafd83a0bc63.png)
+  
+1. On the **Tenant Data Upload** page, use the drop-down menu to choose a data file type for uploading. The file data type denotes the content of the file (for example, "Building" refers to mapping of IP address and building as well as other geographical information, “Endpoint” refers to mapping of Endpoint Name to Endpoint Make/Model/Type…information). Currently we support upload “Building” and “Endpoint” data types for cqd.teams.microsoft.com(in preview stage and not officially available yet), cqd.lync.com only supports upload "Building" data type. A few more data types will be added with subsequent releases.
     
-      - The data file must be a .tsv (Tab-separated values) file or a .csv (Comma-separated value) file. If using a .csv file, any field that contains a comma must be surrounded by quotes or have the comma removed. For example, if your building name is NY,NY, in the .csv file it should be entered as “NY,NY”.
+2. After selecting the file data type, click **Browse** to choose a data file.
     
-      - The data file must be no larger than 50MB in size.
+   - The data file must be a .tsv (Tab-separated values) file or a .csv (Comma-separated value) file. If using a .csv file, any field that contains a comma must be surrounded by quotes or have the comma removed. For example, if your building name is NY,NY, in the .csv file it should be entered as "NY,NY".
     
-      - For each data file, each column in the file must match a predefined data type, discussed later in this topic.
+   - The data file must be no larger than 50MB in size.
+    
+   - The data file must be a .tsv (Tab-separated values) file or a .csv (Comma-separated value) file. If using a .csv file, any field that contains a comma must be surrounded by quotes or have the comma removed. For example, if your building name is NY,NY, in the .csv file it should be entered as “NY,NY”.
+    
+   - The data file must be no larger than 50MB in size.
+    
+   - For each data file, each column in the file must match a predefined data type, discussed later in this topic.
 
 3.  After selecting a data file, specify **Start date** and, optionally, **Specify an end date**.
 
@@ -195,67 +199,71 @@ CQD Dashboard
     
     CQD My Uploads table
     
-    CQD My Uploads table
+     ![CQD My Uploads table](media/4168a883-bbea-461a-80b1-42eedf2e7732.png)
+  
+### Tenant data file format and structure
+<a name="BKMKTenantDataFile"> </a>
 
-### Building data file structure
+### Building data file
+The format of the data file you upload must meet the following to pass the validation check before uploading.
+  
+- The file must be either a .tsv file, which means, in each row, columns are separated by a TAB, or a .csv file with each column separated by a comma.
+    
+- The content of the data file doesn't include table headers. That means the first line of the data file should be real data, not headers like "Network," etc.
+    
+- For each column, the data type can only be String, Number, or Bool. If it is Number, the value must be a numeric value; if it is Bool, the value must be either 0 or 1.
+    
+- For each column, if the data type is string, the data can be empty (but still must be separated by an appropriate delimiter (i.e., a tab or comma). This just assigns that field an empty string value.
+    
+- There must be 14 columns for each row, each column must have the following data type, and the columns must be in the order listed in the following table:
+    
+|**Column Name**|**Data type**|**Example**|
+|:-----|:-----|:-----|
+|Network  <br/> |String  <br/> |192.168.1.0  <br/> |
+|NetworkName  <br/> |String  <br/> |USA/Seattle/SEATTLE-SEA-1  <br/> |
+|NetworkRange  <br/> |Number  <br/> |26  <br/> |
+|BuildingName  <br/> |String  <br/> |SEATTLE-SEA-1  <br/> |
+|OwnershipType  <br/> |String  <br/> |Contoso  <br/> |
+|BuildingType  <br/> |String  <br/> |IT Termination  <br/> |
+|BuildingOfficeType  <br/> |String  <br/> |Engineering  <br/> |
+|City  <br/> |String  <br/> |Seattle  <br/> |
+|ZipCode  <br/> |String  <br/> |98001  <br/> |
+|Country  <br/> |String  <br/> |US  <br/> |
+|State  <br/> |String  <br/> |WA  <br/> |
+|Region  <br/> |String  <br/> |MSUS  <br/> |
+|InsideCorp  <br/> |Bool  <br/> |1  <br/> |
+|ExpressRoute  <br/> |Bool  <br/> |0  <br/> |
+   
+> [!IMPORTANT]
+> The network range can be used to represent a supernet (combination of several subnets with a single routing prefix). All new building uploads will be checked for any overlapping ranges. If you have previously uploaded a building file, you should download the current file and re-upload it to identify any overlaps and fix the issue before uploading again. Any overlap in previously uploaded files may result in the wrong mappings of subnets to buildings in the reports. Certain VPN implementations do not accurately report the subnet information. It is recommended that when adding a VPN subnet to the building file, instead of one entry for the subnet, separate entries are added for each address in the VPN subnet as a separate 32-bit network. Each row can have the same building metadata. For example, instead of one row for 172.16.18.0/24, you should have 256 rows, with one row for each address between 172.16.18.0/32 and 172.16.18.255/32, inclusive. 
 
+### Endpoint data file
 The format of the data file you upload must meet the following to pass the validation check before uploading.
 
-  - The file must be either a .tsv file, which means, in each row, columns are separated by a TAB, or a .csv file with each column separated by a comma.
+- The file must be either a .tsv file, which means, in each row, columns are separated by a TAB, or a .csv file with each column separated by a comma.
 
-  - The content of the data file doesn’t include table headers. That means the first line of the data file should be real data, not headers like “Network,” etc.
+- The content of the data file doesn't include table headers. That means the first line of the data file should be real data, not headers like "EndpointName," etc.
 
-  - For each column, the data type can only be String, Number, or Bool. If it is Number, the value must be a numeric value; if it is Bool, the value must be either 0 or 1.
+- For each column, the data type can only be String and it should have no more than 64 chars, which is maximum allowed length.
 
-  - For each column, if the data type is string, the data can be empty (but still must be separated by an appropriate delimiter (i.e., a tab or comma). This just assigns that field an empty string value.
+- For each column, the data can be empty (but still must be separated by an appropriate delimiter (i.e., a tab or comma). This just assigns that field an empty string value.
 
-  - There must be 14 columns for each row, each column must have the following data type, and the columns must be in the order listed in the following table:
+- There must be 7 columns for each row and the columns must be in the order listed in the following table.
 
-| **Column Name**    | **Data type** | **Example**               |
-| ------------------ | ------------- | ------------------------- |
-| Network            | String        | 192.168.1.0               |
-| NetworkName        | String        | USA/Seattle/SEATTLE-SEA-1 |
-| NetworkRange       | Number        | 26                        |
-| BuildingName       | String        | SEATTLE-SEA-1             |
-| OwnershipType      | String        | Contoso                   |
-| BuildingType       | String        | IT Termination            |
-| BuildingOfficeType | String        | Engineering               |
-| City               | String        | Seattle                   |
-| ZipCode            | String        | 98001                     |
-| Country            | String        | US                        |
-| State              | String        | WA                        |
-| Region             | String        | MSUS                      |
-| InsideCorp         | Bool          | 1                         |
-| ExpressRoute       | Bool          | 0                         |
+- EndpointName must be unique otherwise upload will fail due to duplicate row as it will cause incorrect joining.
 
-> \[\!IMPORTANT\] The network range can be used to represent a supernet (combination of several subnets with a single routing prefix). All new building uploads will be checked for any overlapping ranges. If you have previously uploaded a building file, you should download the current file and re-upload it to identify any overlaps and fix the issue before uploading again. Any overlap in previously uploaded files may result in the wrong mappings of subnets to buildings in the reports. Certain VPN implementations do not accurately report the subnet information. It is recommended that when adding a VPN subnet to the building file, instead of one entry for the subnet, separate entries are added for each address in the VPN subnet as a separate 32-bit network. Each row can have the same building metadata. For example, instead of one row for 172.16.18.0/24, you should have 256 rows, with one row for each address between 172.16.18.0/32 and 172.16.18.255/32, inclusive.
+-  EndpointLabel1, EndpointLabel2, EndpointLable3 are user customizable labels, they can be empty strings or value users prefer such as “IT Department designated 2018 Laptop”, “Asset Tag 5678” …etc.
 
-### Endpoint data file structure
+|**Column Name**|**Data type**|**Example**|
+|:-----|:-----|:-----|
+|EndpointName  <br/> |String  <br/> |1409W3534  <br/> |
+|EndpointMake  <br/> |String  <br/> |Fabrikam Inc  <br/> |
+|EndpointModel  <br/> |String  <br/> |Fabrikam Model 123  <br/> |
+|EndpointType   <br/> |String  <br/> |Laptop  <br/> |
+|EndpointLabel1  <br/> |String  <br/> |IT designated 2018 Laptop  <br/> |
+|EndpointLabel2  <br/> |String  <br/> |Asset Tag 5678  <br/> |
+|EndpointLabel3  <br/> |String  <br/> |Purchase 2018   <br/> |
 
-The format of the data file you upload must meet the following to pass the validation check before uploading.
-
-• The file must be either a .tsv file, which means, in each row, columns are separated by a TAB, or a .csv file with each column separated by a comma.
-
-• The content of the data file doesn't include table headers. That means the first line of the data file should be real data, not headers like "EndpointName," etc.
-
-• For each column, the data type can only be String and it should have no more than 64 chars, which is maximum allowed length.
-
-• For each column, the data can be empty (but still must be separated by an appropriate delimiter (i.e., a tab or comma). This just assigns that field an empty string value.
-
-• There must be 7 columns for each row and the columns must be in the order listed in the following table.
-
-• EndpointName must be unique otherwise upload will fail due to duplicate row as it will cause incorrect joining.
-
-• EndpointLabel1, EndpointLabel2, EndpointLable3 are user customizable labels, they can be empty strings or value users prefer such as “IT Department designated 2018 Laptop”, “Asset Tag 5678” …etc.
-| **Column Name**    | **Data type** | **Example**               |
-| ------------------ | ------------- | ------------------------- |
-| EndpointName       | String        | 1409W3534                 |
-| EndpointMake       | String        | Fabrikam Inc.             |
-| EndpointModel      | String        | Fabrikam Model 123        |
-| EndpointType       | String        | Laptop                    |
-| EndpointLabel1     | String        | IT designated 2018 Laptop |
-| EndpointLabel2     | String        | Asset Tag 5678            |
-| EndpointLabel3     | String        | Purchase 2018             |
 
 ## Selecting media type in detailed reports
 
